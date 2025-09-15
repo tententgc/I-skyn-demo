@@ -1,0 +1,52 @@
+# --- Sensitive Information ---
+# Ignore environment files containing secrets like API keys or tokens.
+.env
+*.env
+.env.*
+
+# --- Python Virtual Environments ---
+# A virtual environment should not be committed.
+# Instead, commit a requirements.txt file.
+/venv/
+/env/
+/.venv/
+/.gradio/
+/ENV/
+
+# --- Python Artifacts ---
+# Ignore Python cache and compiled files.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# --- Models & Data ---
+# Ignore large model files. These should be downloaded or loaded from a remote source.
+*.onnx
+*.pt
+*.pth
+*.h5
+
+# Ignore datasets. These are typically too large for version control.
+# You can uncomment the line below if your data is in a 'data/' folder.
+# /data/
+
+# --- IDE & Editor Configuration ---
+# Ignore configuration files from common editors like VSCode and PyCharm.
+.vscode/
+.idea/
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints/
+
+# --- Operating System Files ---
+# Ignore OS-specific files.
+.DS_Store
+Thumbs.db
+
+# --- Log Files ---
+# Ignore log files, which can become large and are specific to a run.
+*.log

@@ -5,11 +5,14 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     build-essential \
+    ffmpeg \
     cmake \
     pkg-config \
     libsm6 \
     libxext6 \
     libxrender1 \
+    libgl1-mesa-dev \
+    libglib2.0-0\
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory

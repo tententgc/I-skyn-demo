@@ -15,6 +15,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0\
     && rm -rf /var/lib/apt/lists/*
 
+
+
+ENV HF_HOME=/tmp/huggingface
+
 # Set the working directory
 WORKDIR /app
 

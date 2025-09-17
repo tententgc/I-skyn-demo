@@ -33,5 +33,7 @@ USER myuser
 # Expose the port used by FastAPI
 EXPOSE 7860
 
+RUN mkdir -p static/output && chmod -R 777 static/output
+
 # Start the FastAPI application
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]

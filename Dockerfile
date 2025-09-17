@@ -4,6 +4,9 @@ FROM python:3.12-slim
 # Install system dependencies needed for libraries like opencv-python-headless
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
+    build-essential \
+    cmake \
+    pkg-config \
     libsm6 \
     libxext6 \
     libxrender1 \

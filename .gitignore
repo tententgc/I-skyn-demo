@@ -50,3 +50,6 @@ Thumbs.db
 # --- Log Files ---
 # Ignore log files, which can become large and are specific to a run.
 *.log
+*.jpg
+*.jpeg
+*.png

@@ -1,9 +1,8 @@
-# Add a unique comment to force a rebuild
-# CACHE BUSTER: 2025-09-17-01
+# CACHE BUSTER: 2025-09-18-01
 FROM python:3.12-slim
 
-# Install system dependencies needed for libraries like opencv-python
-RUN apt-get update && apt-get install -y \
+# Install system dependencies needed for libraries like opencv-python-headless
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     libsm6 \
     libxext6 \

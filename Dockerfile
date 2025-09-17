@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxext6 \
     libxrender1 \
     libgl1-mesa-dev \
-    libglib2.0-0\
     && rm -rf /var/lib/apt/lists/*
 
 
+RUN useradd -m myuser
 
 ENV HF_HOME=/tmp/huggingface
 
@@ -23,11 +23,12 @@ ENV HF_HOME=/tmp/huggingface
 WORKDIR /app
 
 # Copy requirements.txt and install dependencies
-COPY requirements.txt .
+COPY --chown=myuser:myuser requirements.txt .
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-# Copy the rest of the application code
-COPY . .
+COPY --chown=myuser:myuser . .
+USER myuser
+
 
 # Expose the port used by FastAPI
 EXPOSE 7860

@@ -1,3 +1,13 @@
+---
+title: FastAPI Demo
+emoji: 🎯
+colorFrom: pink
+colorTo: purple
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # FastAPI Demo
 
 This is a web interface to demonstrate object detection using a model deployed with FastAPI and ONNX Runtime.
